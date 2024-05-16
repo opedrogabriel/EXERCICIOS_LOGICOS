@@ -1,0 +1,13 @@
+1- inicio 
+
+2- solicitar n1
+
+3- solicitar n2
+
+4- soma as notas
+
+5- Calcular Média (Média = (Nota1 + Nota2) / 2)
+
+6- média
+
+7- fim
