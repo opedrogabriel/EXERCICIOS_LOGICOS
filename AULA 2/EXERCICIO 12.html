@@ -1,4 +1,12 @@
 
 <script>
-    let valor_litro = parseInt(prompt(""));
+    let valor_litro = parseInt(prompt("qual o valor do litro:"));
+    let litro = parseInt(prompt("quantos litros vc quer abastecer"));
+
+    let valor_total = valor_litro*litro;
+
+    let total = valor_total*10/100;
+    let desconto = valor_total-total;
+
+    alert("esse e o valor total: " + valor_total + " valor do desconto: " + total + " esse valor com desconto:" + desconto  );
 </script>
