@@ -1,0 +1,85 @@
+<script>
+
+    exercicio1();
+    exercicio2();
+    exercicio3();
+    alert(exercicio4());
+    exercicio5();
+    exercicio6();
+    exercicio7();
+    exercicio8();
+
+    function exercicio1() {
+        alert("PGZINN");
+    }
+
+    function exercicio2() {
+        let nomePersonagem = "MCQUENN"
+        alert(nomePersonagem);
+    }
+    function exercicio3() {
+        let baba = parseFloat(prompt("DIGITE UM NUMERO"));
+        let babo = parseFloat(prompt("DIGITE OUTRO NUMERO"));
+        alert(subtrairNumeros(baba, babo) + "\n" + multiplicarNumeros(baba, babo) + "\n" + dividirNumeros(baba, babo) + "\n" + somarNumeros(baba, babo));
+    }
+
+    function somarNumeros(a, b) {
+        return a + b
+    }
+    function subtrairNumeros(a, b) {
+        return a - b
+    }
+    function multiplicarNumeros(a, b) {
+        return a * b
+    }
+    function dividirNumeros(a, b) {
+        return a / b
+    }
+
+    function exercicio4() {
+        let ktchau = prompt("DIGITE SEU NOME")
+        let ktchuga = prompt("DIGITE SEU SOBRENOME")
+
+        return ktchau + ktchuga;
+
+    }
+
+    function exercicio5() {
+        let idade = parseInt(prompt("DIGITE SUA IDADE"));
+        if (idade >= 18) {
+            alert("VOCE E MAIOR DE IDADE")
+        } else {
+            alert("VOCE E MENOR DE IDADE")
+        }
+    }
+
+    function exercicio6() {
+        let number = parseInt(prompt("DIGITE UM NUMERO"));
+        if (number % 2 == 0) {
+            alert("NUMERO PAR")
+        } else {
+            alert("NUMERO IMPAR")
+        }
+    }
+
+    function exercicio7(){
+
+        let number = parseInt(prompt("DIGITE UM NUMERO"));
+        for (let x = number; x >= 0 ; x--){
+            alert(x)
+        }
+        
+    }
+
+    function exercicio8(){
+        let idade = []
+        let pessoas = 0
+        let x = 1
+
+        while( x = 0){
+           x = parseInt(prompt("digite sua idade"));
+        pessoas++; - }
+
+    }
+
+</script>
