@@ -1,13 +1,36 @@
 <script>
 
-    exercicio1();
-    exercicio2();
-    exercicio3();
-    alert(exercicio4());
-    exercicio5();
-    exercicio6();
-    exercicio7();
-    exercicio8();
+   let escolha = parseInt(prompt("DIGITE UM NUMERO DE ACORDO COM A ATIVIDADE: "));
+       
+    switch (escolha){
+    case 1:
+     exercicio1()
+     break
+    case 2:
+    exercicio2()
+    break;
+     case 3:
+    exercicio3()
+    break;
+    case 4:
+    exercicio4()
+    break;
+    case 5:
+    exercicio5()
+    break;
+    case 6:
+    exercicio6()
+    break;
+    case 7:
+    exercicio7()
+    break;
+     case 8:
+    exercicio8()
+    break;
+    case 9:
+    exercicio9()
+    break;
+    }
 
     function exercicio1() {
         alert("PGZINN");
@@ -20,7 +43,7 @@
     function exercicio3() {
         let baba = parseFloat(prompt("DIGITE UM NUMERO"));
         let babo = parseFloat(prompt("DIGITE OUTRO NUMERO"));
-        alert(subtrairNumeros(baba, babo) + "\n" + multiplicarNumeros(baba, babo) + "\n" + dividirNumeros(baba, babo) + "\n" + somarNumeros(baba, babo));
+        alert("SUBITRAÇAO: " + subtrairNumeros(baba, babo) + "\n" + "MULTIPLICAÇAO: " + multiplicarNumeros(baba, babo) + "\n" + "DIVISAO: " + dividirNumeros(baba, babo) + "\n" + "SOMA: " + somarNumeros(baba, babo));
     }
 
     function somarNumeros(a, b) {
@@ -46,8 +69,10 @@
 
     function exercicio5() {
         let idade = parseInt(prompt("DIGITE SUA IDADE"));
-        if (idade >= 18) {
+        if (idade >= 18 && idade < 60) {
             alert("VOCE E MAIOR DE IDADE")
+        } else if (idade >= 60) {
+            alert("VOCE É UM SENHOR DE IDADE")
         } else {
             alert("VOCE E MENOR DE IDADE")
         }
@@ -62,24 +87,84 @@
         }
     }
 
-    function exercicio7(){
+    function exercicio7() {
 
         let number = parseInt(prompt("DIGITE UM NUMERO"));
-        for (let x = number; x >= 0 ; x--){
+        for (let x = number; x >= 0; x--) {
             alert(x)
         }
-        
+
     }
 
-    function exercicio8(){
+    function exercicio8() {
         let idade = []
         let pessoas = 0
         let x = 1
 
-        while( x = 0){
-           x = parseInt(prompt("digite sua idade"));
-        pessoas++; - }
+        while (x != 0) {
+            x = parseInt(prompt("DIGITE SUA IDADE" + "\n" + "DIGITE 0 PARA SAIR"));
+            if (x == 0) {
+                alert("VOCE SAIU DO PRGRAMA")
+            }
+            else {
+                pessoas++;
+                idade.push(x);
+            }
+
+        }
+        contabilizarIdade(idade);
 
     }
+    function contabilizarIdade(idade) {
+        let maioridade = 0
+        let menoridade = 0
+
+        for (let i = 0; i < idade.length; i++) {
+            if (idade[i] >= 18) {
+                maioridade++
+
+            } else {
+                menoridade++
+            }
+        }
+        alert("NUMERO DE PESSOAS MAIOR DE IDADE: " + maioridade + "\n" + "NUMERO DE PESSOAS MENOR IDADE: " + menoridade);
+    }
+
+
+    function exercicio9() {
+        let number = []
+        let quantidade = 0
+        let x = 1
+
+        while (x != 0) {
+            x = parseInt(prompt("DIGITE UM NUMERO MAIOR QUE ZERO" + "\n" + "DIGITE 0 PARA SAIR"));
+            if (x == 0) {
+                alert("VOCE SAIU DO PRGRAMA")
+            }
+            else {
+                quantidade++;
+                number.push(x);
+            }
+        }
+        contabilizarNumeros(number);
+
+    }
+    function contabilizarNumeros(number) {
+        let impares = 0
+        let pares = 0
+
+        for (let i = 0; i < number.length; i++) {
+            if (number[i] % 2 == 0) {
+                pares++
+
+            } else {
+                impares++
+            }
+        }
+        alert("NUMERO PARES: " + pares + "\n" + "NUMERO IMPARES: " + impares);
+    }
+
+
+
 
 </script>
