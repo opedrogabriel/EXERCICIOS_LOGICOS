@@ -1,0 +1,32 @@
+<script>
+
+    let perguntas = ["1- HTML É UMA LINGUAGEM DE PROGRAMAÇÃO?" +"\n NAO - DIGITE 0\n SIM - DIGITE 1" , "2 - HTML PODE SER USADO PARA ESTILIZAR?" + " \n NAO - DIGITE 0\n SIM - DIGITE 1", "3- PYTHON É UMA LIGUAGEM DE PROGRAMAÇÃO?" + "\n NAO - DIGITE 0\n SIM - DIGITE 1"]
+
+    let respostas = [[0,1] , [0,1 ] ,  [0,1]]
+    let pontuação = 0;
+
+    for(let i = 0; i < 5; i++){
+        perguntasErespostas(i)
+        alert("VOCE ACERTOU " + pontuação + " DE 3!");
+    }
+
+    function perguntasErespostas (i){
+
+        let quizz = parseInt(prompt(perguntas[i] + "\n" + respostas[i][0]))
+
+        if( quizz == i){ 
+         alert("VOCE ACERTOU !");
+         pontuação ++;
+        }
+
+        else{
+            alert("VOCE ERROU !");
+        }
+
+    }
+    
+    
+
+
+
+</script>
